@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover, .overlay-content a:focus {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: #fff;
+}
+         body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #141e5491, #243b1591);
+        color: #f0f0f0;
+        line-height: 1.6;
+    }
+
+
+    .card {
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid #ff7e5f;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 300px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #ff7e5f;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 25px;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+        background: #feb47b;
+        transform: translateY(-3px);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        color: #fff;
+        font-size: 0.9rem;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+      }
+    header {
+        background: linear-gradient(5593deg, #555, #555);
+        color: white;
+        padding: 20px 10px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        background: #111;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    nav li {
+        list-style: none;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 18px;
+        padding: 8px 15px;
+        transition: background 0.3s, color 0.3s;
+        border-radius: 5px;
+    }
+
+    nav a:hover {
+        background: #444;
+        color: #ff7e5f;
+    }
+
+
+    .card {
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid #ff7e5f;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 300px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #ff7e5f;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 25px;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+        background: #feb47b;
+        transform: translateY(-3px);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        color: #fff;
+        font-size: 0.9rem;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+    }
+        #searchInput {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            border: 2px solid #444;
+            border-radius: 5px;
+            display: block;
+        }
+        #searchResults {
+            width: 10%;
+            padding: 10px;
+            margin: 10px auto;
+            border: 1px solid #ff7e5f;
+            border-radius: 5px;
+            display: block;
+            margin-top: 2px;
+        }
+        .result {
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .result a {
+            text-decoration: none;
+            color: #444;
+        }
+        .result:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Explore South America</h1>
+        <p>Search for a country and jump directly to its section</p>
+        <input type="text" id="searchInput" placeholder="Search country names..." onkeyup="searchItems()">
+        <div id="searchResults"></div>
+    <div id="navOverlay" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+	<a href="#home">Home</a>
+	<a href="#about">Asia</a>
+	<a href="#products">Africa</a>
+	<a href="#location">North America</a>
+	<a href="#timings">South America</a>
+        <a href="file:///C:/Users/Yuval/Desktop/EXTRAS/New%20folder/website%20project/abcde%20-%20Copy.html">Europe</a>
+        <a href="#contact">Ocean</a>
+        <a href="#contact">Oceania</a>
+        <a href="#feedback">Antarctica</a>
+        </div>
+    </div>
+    <span class="openbtn" onclick="openNav()">&#9776; Menu</span>
+    <script src="scripts.js"></script>  
+</header>
+
+    <section id="Argentina">
+     <br><br>
+     <div class="card">
+<image src="https://img.freepik.com/premium-photo/argentina-country-flag-wavy-silk-fabric-background-panorama-illustration_532963-1052.jpg" style="Width:300px; height:200px;">        
+        <h2>Argentina</h2>
+        <p><b>President:</b> Javier Milei<br>
+<b>Prime Minister:</B> None<br>
+<b>Special:</b> Known for its tango music, beautiful landscapes like Patagonia, and passionate football culture.</p>
+ <a href="https://www.worldatlas.com/r/w1200/upload/e4/03/f0/argentina-provinces-map." class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Bolivia">
+     <br><br>
+     <div class="card">
+<image src="https://media.istockphoto.com/id/1270281940/vector/bolivia-country-flag-on-wavy-silk-fabric-background-panorama.jpg?s=612x612&w=0&k=20&c=HvWQrNVNK5JbldCf4No7lwh_zGvnj3bKpvgintSh5I4=" style="Width:300px; height:200px;">        
+        <h2>Bolivia</h2>
+        <p><b>President:</b> Luis Arce<br>
+<b>Prime Minister:</b> None<br>
+<b>Special:</b> Famous for its Andean culture, salt flats (Salar de Uyuni), and high-altitude cities.</p>
+ <a href="https://th.bing.com/th/id/OIP.0yQtkNOPbnblMcCFN43vyAHaIJ?rs=1&pid=ImgDetMain" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Brazil">
+     <br><br>
+     <div class="card">
+<image src="https://c4.wallpaperflare.com/wallpaper/441/892/998/brazil-brasil-flag-wallpaper-preview.jpg" style="Width:300px; height:200px;">        
+        <h2>Brazil</h2>
+        <p><b>President:</b> Luis Arce<br>
+<b>Prime Minister:</b> None<br>
+<b>Special:</b> Famous for its Andean culture, salt flats (Salar de Uyuni), and high-altitude cities.</p>
+ <a href="https://th.bing.com/th/id/OIP.xUwcOsgc9OcgCD74gTZTIgHaJP?rs=1&pid=ImgDetMain" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Chile">
+     <br><br>
+     <div class="card">
+<image src="https://th.bing.com/th/id/R.9749fca04775faf68988ec8739b1c109?rik=Oy4VP68q5lLeOQ&riu=http%3a%2f%2fwww.zastavki.com%2fpictures%2foriginals%2f2013%2fWorld___Flag_Of_Chile_041871_.jpg&ehk=X0CM0dhqHtEChu5zkv97Bx8ICW7nBbO0F2sNNtrSpi4%3d&risl=&pid=ImgRaw&r=0" style="Width:300px; height:200px;">        
+        <h2>Chile</h2>
+        <p><b>President:</b> Gabriel Boric<br>
+<b>Prime Minister:</b> None<br>
+<b>Special:</b> Famous for its long coastline, Andes mountains, and diverse climates from deserts to glaciers.</p>
+ <a href="https://www.worldatlas.com/r/w1200/upload/1f/b9/d3/chile-administrative-map.png" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Colombia">
+     <br><br>
+     <div class="card">
+<image src="https://i.ytimg.com/vi/BfgGv43RILQ/maxresdefault.jpg" style="Width:300px; height:200px;">        
+        <h2>Colombia</h2>
+        <p><b>President:</b> Gustavo Petro<br>
+<b>Prime Minister:</b> None<br>
+<b>Special:</b> Known for its coffee, vibrant culture, and beautiful beaches on both the Pacific and Caribbean coasts.</p>
+ <a href="https://th.bing.com/th/id/OIP.Qf_CihQqD4G23ynOs1yn9gHaJX?rs=1&pid=ImgDetMain" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Ecuador">
+     <br><br>
+     <div class="card">
+<image src="https://th.bing.com/th/id/OIP.H_OLX32ByM7J0q6y2icp6QHaEK?rs=1&pid=ImgDetMain" style="Width:300px; height:200px;">        
+        <h2>Ecuador</h2>
+        <p><b>President:</b> Daniel Noboa<br>
+<b>Prime Minister:</b> None<br>
+<b>Special:</b> Famous for the Galápagos Islands and being the first country to officially recognize the rights of nature.</p>
+ <a href="https://www.worldatlas.com/upload/f5/b0/67/provinces-of-ecuador-map.png" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Guyana">
+     <br><br>
+     <div class="card">
+<image src="https://thumbs.dreamstime.com/b/guyana-country-flag-wavy-silk-fabric-background-panorama-guyana-country-flag-wavy-silk-fabric-background-panorama-185377929.jpg" style="Width:300px; height:200px;">        
+        <h2>Guyana</h2>
+        <p><b>President:</b> Irfaan Ali<br>
+<b>Prime Minister:</b> Mark Phillips<br>
+<b>Special:</b> Known for its diverse culture and being one of the least developed countries in South America.</p>
+ <a href="https://th.bing.com/th/id/R.1ab0fa2eeaf9565f0d24641e15400e4c?rik=mpIYkNDeM92eIw&riu=http%3a%2f%2fwww.ezilon.com%2fmaps%2fimages%2fsouthamerica%2fmap-of-Guyana.gif&ehk=iQqJhyISJy63C4qM%2fUEGn%2fc1Mq1m84wjoJVEohUKEr0%3d&risl=&pid=ImgRaw&r=0" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Paraguay">
+     <br><br>
+     <div class="card">
+<image src="https://th.bing.com/th/id/OIP._dld_1Gm1Im1GOMwhA0NgQHaEo?rs=1&pid=ImgDetMain" style="Width:300px; height:200px;">        
+        <h2>Paraguay</h2>
+        <p><b>President:</b> Santiago Peña<br>
+<b>Prime Minister:</b> None<br>
+<b>Special:</b> Known for its unique blend of indigenous and Spanish cultures and being landlocked.</p>
+ <a href="https://www.mappr.co/wp-content/uploads/2021/11/paraguay-political-map.jpg" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Peru">
+     <br><br>
+     <div class="card">
+<image src="https://i.ytimg.com/vi/yde0Lw4nKxg/maxresdefault.jpg" style="Width:300px; height:200px;">        
+        <h2>Peru</h2>
+        <p><b>President:</b> Dina Boluarte<br>
+<b>Prime Minister:</b> Alberto Otarola<br>
+<b>Special:</b> Famous for the ancient Incan city of Machu Picchu and its rich cultural heritage.</p>
+ <a href="https://www.worldatlas.com/r/w1200/upload/ae/e7/9a/regions-of-peru-map.png" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Suriname">
+     <br><br>
+     <div class="card">
+<image src="https://th.bing.com/th/id/R.dfef0403e1db6b248842376c241cfd2d?rik=EukGfqIsF51hTQ&riu=http%3a%2f%2fjustfunfacts.com%2fwp-content%2fuploads%2f2016%2f07%2fsuriname-flag.jpg&ehk=eSBSZ5T0qNRCuZ%2bwNUzs4Won2vl7VOrzg%2bqyFfiVErU%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" style="Width:300px; height:200px;">        
+        <h2>Suriname</h2>
+        <p><b>President:</b> Chanda Hasrat<br>
+<b>Prime Minister:</b> None<br>
+<b>Special:</b> Known for its rainforests, diverse ethnic groups, and being the smallest country in South America.</p>
+ <a href="https://th.bing.com/th/id/R.de224ed4fd79b6e9b738459e7fb05005?rik=IRFcEtlUMD0I%2fg&riu=http%3a%2f%2fwww.mappery.com%2fmaps%2fSuriname-Map-2.mediumthumb.gif&ehk=XQteL%2fpwGa74cSXJtY1B1%2foAizKu4%2blr1XIWYwEznJI%3d&risl=&pid=ImgRaw&r=0" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Uruguay">
+     <br><br>
+     <div class="card">
+<image src="https://th.bing.com/th/id/R.013b0d93bebc73dbbbdab96f7cb4eb43?rik=cyNmrcGeqhQKOQ&riu=http%3a%2f%2fwww.zastavki.com%2fpictures%2foriginals%2f2013%2fWorld___other_world_Flag_Of_Uruguay_041940_.jpg&ehk=JEZqPpxZagcK9x3NiJQdfbH0mzgUuCOAthekw7j6xt4%3d&risl=&pid=ImgRaw&r=0" style="Width:300px; height:200px;">        
+        <h2>Uruguay</h2>
+        <p><b>President:</b> Luis Lacalle Pou<br>
+<b>Prime Minister:</b> None<br>
+<b>Special:</b> Known for its stable economy, high standard of living, and being the first country in the world to legalize marijuana.</p>
+ <a href="https://www.worldatlas.com/r/w1200/upload/36/31/5d/uruguay.png" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+     <section id="Venezuela">
+     <br><br>
+     <div class="card">
+<image src="https://th.bing.com/th/id/OIP.sCzIrwnZPXHdssmtDbKuOQHaEK?rs=1&pid=ImgDetMain" style="Width:300px; height:200px;">        
+        <h2>Venezuela</h2>
+        <p><b>President:</b> Nicolás Maduro<br>
+<b>Prime Minister:</b> None<br>
+<b>Special:</b> Known for its oil reserves, but also facing political and economic turmoil in recent years.</p>
+ <a href="https://3.bp.blogspot.com/-_4q_CxZsZcY/WTZQlpXjryI/AAAAAAAAE8M/OMklQ1hpUzEpV_cfxaDm68MTGYg0B2PlACLcB/s2600/venezuela%2Bmap%2Bhd.jpg" class="btn">View Map</a>
+    </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024-25 YTechArt. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const items = [
+            { name: "Argentina", id: "Argentina" },
+            { name: "Bolivia", id: "Bolivia" },
+            { name: "Brazil", id: "Brazil" },
+            { name: "Chile", id: "Chile" },
+            { name: "Colombia", id: "Colombia" },
+            { name: "Ecuador", id: "Ecuador" },
+            { name: "Guyana", id: "Guyana" },
+            { name: "Paraguay", id: "Paraguay" },
+            { name: "Peru", id: "Peru" },
+            { name: "Suriname", id: "Suriname" },
+            { name: "Uruguay", id: "Uruguay" },
+            { name: "Venezuela", id: "Venezuela" }
+        ];
+function openNav() {
+    document.getElementById("navOverlay").style.width = "500px";
+}
+
+function closeNav() {
+    document.getElementById("navOverlay").style.width = "0";
+}
+        function searchItems() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filteredItems = items.filter(item => item.name.toLowerCase().includes(query));
+
+            displayResults(filteredItems);
+        }
+
+        function displayResults(results) {
+            const resultContainer = document.getElementById('searchResults');
+            resultContainer.innerHTML = ''; // Clear previous results
+
+            if (results.length === 0) {
+                resultContainer.innerHTML = '<p>No results found</p>';
+            } else {
+                results.forEach(result => {
+                    const div = document.createElement('div');
+                    div.classList.add('result');
+
+                    const link = document.createElement('a');
+                    link.href = `#${result.id}`; // Anchor link to the section ID
+                    link.textContent = result.name; // Link text
+
+                    div.appendChild(link);
+                    resultContainer.appendChild(div);
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
