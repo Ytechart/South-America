@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html>
     <style>
- body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    .openbtn {
+       font-size: 30px;
+       cursor: pointer;
+       position: fixed;
+       top: 20px;
+       left: 20px;
+       z-index: 1;
+    }
 
-.openbtn {
-    font-size: 30px;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1;
-}
+    .overlay {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 2;
+       top: 0;
+       left: 0;
+       background-color: rgba(0,0,0,0.888);
+       overflow-x: hidden;
+       transition: 0.5s;
+    }
 
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-}
+    .overlay-content {
+       position: relative;
+       top: 25%;
+       width: 100%;
+       text-align: center;
+       margin-top: 30px;
+    }
 
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
+    .overlay-content a {
+       padding: 8px;
+       text-decoration: none;
+       font-size: 36px;
+       color: #823;
+       display: block;
+       transition: 0.3s;
+    }
 
-.overlay-content a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
+       .overlay-content a:hover, .overlay-content a:focus {
+        color: #f1f1f1;
+    }
 
-.overlay-content a:hover, .overlay-content a:focus {
-    color: #f1f1f1;
-}
-
-.closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    cursor: pointer;
-    color: #fff;
-}
-         body {
-        font-family: 'Roboto', sans-serif;
+    .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        cursor: pointer;
+        color: #fff;
+    }
+     body {
+        font-family: 'Century Gothic';
         margin: 0;
         padding: 0;
-        background: linear-gradient(to right, #141e5491, #243b1591);
+        background: #387;
         color: #f0f0f0;
         line-height: 1.6;
     }
@@ -83,32 +77,8 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     }
 
-    .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background: #ff7e5f;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 25px;
-        transition: background 0.3s, transform 0.3s;
-    }
-
-    .btn:hover {
-        background: #feb47b;
-        transform: translateY(-3px);
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #111;
-        color: #fff;
-        font-size: 0.9rem;
-        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
-      }
     header {
-        background: linear-gradient(5593deg, #555, #555);
+        background: #111;
         color: white;
         padding: 20px 10px;
         text-align: center;
@@ -116,10 +86,8 @@
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 3rem;
         margin-bottom: 10px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
     }
 
     header p {
@@ -156,23 +124,6 @@
         color: #ff7e5f;
     }
 
-
-    .card {
-        background: rgba(0, 0, 0, 0.7);
-        border: 1px solid #ff7e5f;
-        border-radius: 12px;
-        padding: 25px;
-        margin: 20px auto;
-        max-width: 300px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    }
-
     .btn {
         display: inline-block;
         padding: 10px 20px;
@@ -192,7 +143,7 @@
     footer {
         text-align: center;
         padding: 20px;
-        background: #111;
+        background: #100;
         color: #fff;
         font-size: 0.9rem;
         box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
@@ -235,7 +186,7 @@
     <header>
         <h1>Explore South America</h1>
         <p>Search for a country and jump directly to its section</p>
-        <input type="text" id="searchInput" placeholder="Search country names..." onkeyup="searchItems()">
+   <input type="text" id="searchInput" placeholder="Search country names..." onkeyup="searchItems()">
         <div id="searchResults"></div>
     <div id="navOverlay" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -244,7 +195,7 @@
 	<a href="#about">Asia</a>
 	<a href="#products">Africa</a>
 	<a href="#location">North America</a>
-	<a href="https://ytechart.github.io/South-America/">South America</a>
+	<a href="#timings">South America</a>
         <a href="file:///C:/Users/Yuval/Desktop/EXTRAS/New%20folder/website%20project/abcde%20-%20Copy.html">Europe</a>
         <a href="#contact">Ocean</a>
         <a href="#contact">Oceania</a>
